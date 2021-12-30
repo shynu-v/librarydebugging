@@ -69,7 +69,7 @@ app.get('/',function(req,res){
 
 
 
-
-app.listen(5000,()=>{
-    console.log("Server Ready on 5000"); //part#1point#5
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log("Server Ready on"+PORT); //part#1point#5
 });
