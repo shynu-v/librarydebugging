@@ -6,11 +6,14 @@ const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 
 //database connectivity to avoid some warnings some options are added
-mongoose.connect("mongodb+srv://shynu:123456@library.i9mll.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
-	useUnifiedTopology: true,
-	useNewUrlParser: true,
-	useFindAndModify: true,
-});
+mongoose.connect(
+	"mongodb+srv://shynu:KabFSjVr6J56GBuq@library.i9mll.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	{
+		useUnifiedTopology: true,
+		useNewUrlParser: true,
+		useFindAndModify: true,
+	}
+);
 
 const nav= [
     {
