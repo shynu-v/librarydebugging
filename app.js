@@ -38,7 +38,7 @@ const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
 const homeRouter = require('./src/routes/homerouter')(nav); //part#1point#3
 const booksRouter = require('./src/routes/booksroute')(nav);
-const authorsRouter = require('./src/routes/authorsroute')(nav);
+const authorsRouter = require('./src/routes/authorsroute')(nav);        //part#2point#6 navbars
 
 const app = new express; 
 
@@ -47,7 +47,7 @@ app.set('views','./src/views');
 app.set('view engine','ejs'); 
 
 app.use(methodOverride('_method')); //to call put/delete in html
-app.use(cors()); //part#2point#2
+app.use(cors()); //part#2point#7
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 

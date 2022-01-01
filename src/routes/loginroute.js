@@ -11,14 +11,14 @@ loginRouter.get('/',function(req,res){
 
 loginRouter.get("/check",function(req,res){
     var checkuser = {
-        uid:req.param("uid"),
-        pwd:req.param("pwd")
+        uid: req.query.uid,
+        pwd: req.query.pwd, //part#2 point 10
     };
     
     console.log(checkuser);
     var flag=false;
 
-//    var flagg = user.find((e)=>{
+// var flagg = user.find((e)=>{
        for(let i=0;i<user.length;i++){
         
         if(checkuser.uid==user[i].uid && checkuser.pwd==user[i].pwd)
@@ -32,8 +32,7 @@ loginRouter.get("/check",function(req,res){
             }
         };
 
-        console.log(flag);
-
+    console.log(flag);
 if(flag==true){
     // alert("User Verified.Click to continue");
     res.redirect("/home")
