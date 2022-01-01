@@ -15,24 +15,28 @@ mongoose.connect(
 	}
 );
 
-const nav= [
-    {
-        link:"/books",
-        title:"Books"
-    },
-    {
-        link:"/authors",
-        title:"Authors"
-    },
-    {
-        link:"/books/addbook",
-        title:"Add Book"
-    },
-    {
-        link:"/authors/addauthor",
-        title:"Add Author"
-    }
-]
+const nav = [
+	{
+		link: "/books",
+		title: "Books",
+	},
+	{
+		link: "/authors",
+		title: "Authors",
+	},
+	{
+		link: "/books/addbook",
+		title: "Add Book",
+	},
+	{
+		link: "/authors/addauthor",
+		title: "Add Author",
+	},
+	{
+		link: "/",
+		title: "LogOut",
+	},
+];
 
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
